@@ -10,7 +10,7 @@ const DifferentHome = () => {
   // const [showLoader, setShowLoader] = useState(true);
   // const fetchData = async () => {
   //   const response = await fetch(
-  //     "http://localhost:5000/velvethomes/customer/home",
+  //     "http://localhost:5000https://ecommerce-8rsl.onrender.com/velvethomes/customer/home",
   //     {
   //       method: "POST",
   //       headers: {
@@ -120,7 +120,7 @@ const DifferentHome = () => {
             borderRadius: "15px 15px 0 0",
           }}
         >
-          <Link to={`/velvethomes/showprodcat/64a5955d9b3dc77cbe74db29`}>
+          <Link to={`https://ecommerce-8rsl.onrender.com/velvethomes/showprodcat/64a5955d9b3dc77cbe74db29`}>
             <img
               ref={(ref) => imagesRef.current.push(ref)}
               src="https://ii1.pepperfry.com/media/catalog/product/c/a/1100x1210/catherine-8-seater-dining-table-in-white-colour-by-durian-catherine-8-seater-dining-table-in-white-c-p2u9mw.jpg"
@@ -143,7 +143,7 @@ const DifferentHome = () => {
             borderRadius: "15px 15px 0 0",
           }}
         >
-          <Link to={`/velvethomes/showprodcat/64a5960c7b9dea400786c055`}>
+          <Link to={`https://ecommerce-8rsl.onrender.com/velvethomes/showprodcat/64a5960c7b9dea400786c055`}>
             <img
               ref={(ref) => imagesRef.current.push(ref)}
               src="https://cdn.pixelspray.io/v2/black-bread-289bfa/Zu3Ns5/wrkr/t.resize(h:450,w:500)/data/pottery-barn/23052022newimg/7910248_1.jpg"
@@ -166,7 +166,7 @@ const DifferentHome = () => {
             borderRadius: "15px 15px 0 0",
           }}
         >
-          <Link to={`/velvethomes/showallprodsubcat/64aa7d3f3f89f953e9b1e8a8`}>
+          <Link to={`https://ecommerce-8rsl.onrender.com/velvethomes/showallprodsubcat/64aa7d3f3f89f953e9b1e8a8`}>
             <img
               ref={(ref) => imagesRef.current.push(ref)}
               src="https://ii1.pepperfry.com/media/catalog/product/g/r/1100x1210/grey-marble-dust-shri-hanuman-sculpture-by-yellow-verandah-grey-marble-dust-shri-hanuman-sculpture-b-yxweg2.jpg"
@@ -189,7 +189,7 @@ const DifferentHome = () => {
             borderRadius: "15px 15px 0 0",
           }}
         >
-          <Link to={`/velvethomes/showprodcat/64a594174f6b05e6fe5a5545`}>
+          <Link to={`https://ecommerce-8rsl.onrender.com/velvethomes/showprodcat/64a594174f6b05e6fe5a5545`}>
             <img
               ref={(ref) => imagesRef.current.push(ref)}
               src="https://somany-uat.s3.amazonaws.com/static/uploads/Tiles-Somany/Product-Thumbnail/T60506284.jpg"
@@ -232,7 +232,7 @@ const DifferentHome = () => {
         }}
       >
         <Link
-          to={`/velvethomes/showprodcat/64a5955d9b3dc77cbe74db29`}
+          to={`https://ecommerce-8rsl.onrender.com/velvethomes/showprodcat/64a5955d9b3dc77cbe74db29`}
           style={{ color: "black" }}
         >
           FURNITURE
@@ -242,7 +242,7 @@ const DifferentHome = () => {
       <div style={{ display: "flex", margin: "1% 0% 3% 4%", columnGap: "1%" }}>
         <div className="image">
           <Link
-            to={`/velvethomes/showallprodsubcat/64aa7d3d3f89f953e9b1e88a`}
+            to={`https://ecommerce-8rsl.onrender.com/velvethomes/showallprodsubcat/64aa7d3d3f89f953e9b1e88a`}
             target="_self"
           >
             <img
@@ -263,7 +263,7 @@ const DifferentHome = () => {
         </div>
         <div className="image">
           <Link
-            to={`/velvethomes/showallprodsubcat/64aa7d3d3f89f953e9b1e88c`}
+            to={`https://ecommerce-8rsl.onrender.com/velvethomes/showallprodsubcat/64aa7d3d3f89f953e9b1e88c`}
             target="_self"
           >
             <img
@@ -284,7 +284,7 @@ const DifferentHome = () => {
         </div>
         <div className="image">
           <Link
-            to={`/velvethomes/showallprodsubcat/64aa7d3e3f89f953e9b1e894`}
+            to={`https://ecommerce-8rsl.onrender.com/velvethomes/showallprodsubcat/64aa7d3e3f89f953e9b1e894`}
             target="_self"
           >
             <img
@@ -305,7 +305,7 @@ const DifferentHome = () => {
         </div>
         <div className="image">
           <Link
-            to={`/velvethomes/showallprodsubcat/64aa7d3d3f89f953e9b1e890`}
+            to={`https://ecommerce-8rsl.onrender.com/velvethomes/showallprodsubcat/64aa7d3d3f89f953e9b1e890`}
             target="_self"
           >
             <img
@@ -350,7 +350,7 @@ const DifferentHome = () => {
         }}
       >
         <Link
-          to={`/velvethomes/showallprodsubcat/64aa7d3f3f89f953e9b1e8a8`}
+          to={`https://ecommerce-8rsl.onrender.com/velvethomes/showallprodsubcat/64aa7d3f3f89f953e9b1e8a8`}
           style={{ color: "black" }}
         >
           ARTIFACTS
@@ -405,7 +405,7 @@ const DifferentHome = () => {
         }}
       >
         <Link
-          to={`/velvethomes/showprodcat/64a594174f6b05e6fe5a5545`}
+          to={`https://ecommerce-8rsl.onrender.com/velvethomes/showprodcat/64a594174f6b05e6fe5a5545`}
           style={{ color: "black" }}
         >
           TILE
@@ -476,7 +476,7 @@ const DifferentHome = () => {
           }}
         >
           <Link
-            to={`/velvethomes/showprodcat/64a5960c7b9dea400786c055`}
+            to={`https://ecommerce-8rsl.onrender.com/velvethomes/showprodcat/64a5960c7b9dea400786c055`}
             style={{ color: "black" }}
           >
             SANITORY
@@ -531,7 +531,7 @@ const DifferentHome = () => {
           }}
         >
           <Link
-            to={`/velvethomes/showallprodsubcat/64aa7d3f3f89f953e9b1e8aa`}
+            to={`https://ecommerce-8rsl.onrender.com/velvethomes/showallprodsubcat/64aa7d3f3f89f953e9b1e8aa`}
             style={{ color: "black" }}
           >
             PAINTS
