@@ -36,7 +36,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.setHeader(
+      "Access-Control-Allow-Origin",
+      "https://main--endearing-haupia-ef27f3.netlify.app"
+    );
     res.header(
         "Access-control-Allow-Headers",
         "origin, x-Requested-with, Content-Type, Accept"
