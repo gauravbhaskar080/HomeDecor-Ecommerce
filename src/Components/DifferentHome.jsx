@@ -59,6 +59,15 @@ const DifferentHome = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const productsData = [
+    {
+      id: "64a5955d9b3dc77cbe74db29",
+      category: "Furniture",
+      image:
+        "https://ii1.pepperfry.com/media/catalog/product/c/a/1100x1210/catherine-8-seater-dining-table-in-white-colour-by-durian-catherine-8-seater-dining-table-in-white-c-p2u9mw.jpg",
+    },
+    // Add more products as needed
+  ];
 
   return (
     <div
@@ -120,13 +129,13 @@ const DifferentHome = () => {
             borderRadius: "15px 15px 0 0",
           }}
         >
-          <Link to={`/velvethomes/showprodcat/64a5955d9b3dc77cbe74db29`}>
+          <Link to={`/velvethomes/showprodcat/${product.id}`}>
             <img
               ref={(ref) => imagesRef.current.push(ref)}
-              src="https://ii1.pepperfry.com/media/catalog/product/c/a/1100x1210/catherine-8-seater-dining-table-in-white-colour-by-durian-catherine-8-seater-dining-table-in-white-c-p2u9mw.jpg"
+              src={product.image}
               width="335"
               height="350"
-              alt="VelvetHomes"
+              alt={product.category}
               style={{
                 borderRadius: "15px 15px 0 0",
                 boxShadow: "0px 8px 6px -4px rgba(0, 0, 0, 0.5)",
@@ -134,7 +143,7 @@ const DifferentHome = () => {
               className="lload img-fluid"
             />
           </Link>
-          <p>Furniture </p>
+          <p>{product.category}</p>
         </div>
         <div
           className="item"
@@ -207,10 +216,7 @@ const DifferentHome = () => {
         </div>
       </div>
       <div className="family-room-image" style={{ margin: "3% 0 2% 0" }}>
-        <Link
-          to="/pottery-barn-living-room-furniture"
-          target="_self"
-        >
+        <Link to="/pottery-barn-living-room-furniture" target="_self">
           <img
             // ref={(ref) => imagesRef.current.push(ref)}
             width="100%"
