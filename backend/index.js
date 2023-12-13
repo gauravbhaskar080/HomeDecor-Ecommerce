@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000/");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
     res.header(
         "Access-control-Allow-Headers",
         "origin, x-Requested-with, Content-Type, Accept"
@@ -49,14 +49,14 @@ app.get('/', (req, res) => {
 })
 
 // Route for fetching all the products to displayed on the home page
-app.post('velvethomes/customer/home',
+app.post('/velvethomes/customer/home',
 async(req,res)=>{
     const home = await HomeObjects.find().populate('products');
     return res.json({success: true,objects: home})
 })
 
 // Route For Fetching The Details To Be Shown On Category Page 
-app.post('velvethomes/customer/showallcat',
+app.post('/velvethomes/customer/showallcat',
 async(req,res)=>{
     const id = req.body.id;
     const cat = await Category.findById(id);
@@ -65,7 +65,7 @@ async(req,res)=>{
 })
 
 // Route For Fetching All Products Of A Particular Type 
-app.post('velvethomes/customer/showallsubcat',
+app.post('/velvethomes/customer/showallsubcat',
 async(req,res)=>{
     const id = req.body.id;
     const subcat = await SubCategory.findById(id);
@@ -74,14 +74,14 @@ async(req,res)=>{
 })
 
 // Used To Display the products Details And Also For Generating Bills
-app.post('velvethomes/customer/productdetails',
+app.post('/velvethomes/customer/productdetails',
 async(req,res)=>{
     const obj = await Object.findById(req.body.oid);
     return res.json({success: true,object: obj});
 })
 
 // Used For Placing Order 
-app.post('velvethomes/customer/placeorder',
+app.post('/velvethomes/customer/placeorder',
 async(req,res)=>{
     const obj = await Object.findById(req.body.id);
     const discount = parseInt(req.body.discount)
@@ -120,7 +120,7 @@ async(req,res)=>{
 })
 
 // Used For Adding Element To Cart 
-app.post('velvethomes/customer/addtocart',
+app.post('/velvethomes/customer/addtocart',
 async(req,res)=>{
     const v = await Cart.findOne({username: req.body.username});
     const obj = await Object.findById(req.body.id);
@@ -143,7 +143,7 @@ async(req,res)=>{
 })
 
 // Used For Fetching Data To be shown on the My Cart Page 
-app.post('velvethomes/customer/cartdetails',
+app.post('/velvethomes/customer/cartdetails',
 async(req,res)=>{
     const ca = await Cart.findOne({username: req.body.username}).populate('product');
     if(!ca){
@@ -154,7 +154,7 @@ async(req,res)=>{
 })
 
 // Used for Deleting a specific product from a particular item from cart 
-app.post('velvethomes/customer/deleteElementFromCart',
+app.post('/velvethomes/customer/deleteElementFromCart',
 async(req,res)=>{
     const ca = await Cart.findOne({username: req.body.username});
     const arr =ca.product;
@@ -168,7 +168,7 @@ async(req,res)=>{
 })
 
 // Used for Fetching valid code or not 
-app.post('velvethomes/customer/validcode',
+app.post('/velvethomes/customer/validcode',
 async(req,res)=>{
     const dc = await DiscountCode.findOne({code: req.body.code});
     if(!dc){
@@ -188,7 +188,7 @@ async(req,res)=>{
 })
 
 // Used For Fetching Personal Information Of The Users 
-app.post('velvethomes/customer/pinfo',
+app.post('/velvethomes/customer/pinfo',
 async(req,res)=>{
     const cust = await Customer.findOne({username: req.body.username})
     const b = await Bought.find({username: req.body.username}).populate('product')
@@ -196,7 +196,7 @@ async(req,res)=>{
 })
 
 // Used for creating A new Company 
-app.post('velvethomes/seller/createcomp',
+app.post('/velvethomes/seller/createcomp',
     body('email').isEmail(),
     body('password', "Password Too Short").isLength({ min: 7 }),
     body('companyname').isLength({ min: 1 }),
@@ -228,7 +228,7 @@ app.post('velvethomes/seller/createcomp',
     })
 
 // Company Login Route 
-app.post('velvethomes/seller/login',
+app.post('/velvethomes/seller/login',
     body('email').isEmail(),
     body('password', "Password Too Short").isLength({ min: 7 }),
     async (req, res) => {
@@ -255,7 +255,7 @@ app.post('velvethomes/seller/login',
 
 
 // Company Home Page Details Display 
-app.post('velvethomes/seller/home',
+app.post('/velvethomes/seller/home',
     body('email').isEmail(),
     async (req, res) => {
         const errors = validationResult(req);
@@ -269,7 +269,7 @@ app.post('velvethomes/seller/home',
 
 
 // Route For Adding A New Product 
-app.post('velvethomes/seller/addnewprod',
+app.post('/velvethomes/seller/addnewprod',
     async (req, res) => {
         try {
             const obj = new Object();
@@ -321,14 +321,14 @@ app.post('velvethomes/seller/addnewprod',
 })
 
 // Used for displaying all products registered by any company 
-app.post('velvethomes/selller/showallprods',
+app.post('/velvethomes/selller/showallprods',
 async(req,res)=>{
     const obj = await Object.find({companyusername: req.body.email});
     return res.json({success: true,objects: obj})
 })
 
 // Used for Logining In of Admin
-app.post('velvethomes/admin/login',
+app.post('/velvethomes/admin/login',
 body('email').isEmail(),
 body('password', "Password Too Short").isLength({ min: 7 }),
 async(req,res)=>{
@@ -354,7 +354,7 @@ async(req,res)=>{
 })
 
 // Used for fetching Data To Be Displayed On Admin Home Page 
-app.post('velvethomes/admin/home',
+app.post('/velvethomes/admin/home',
 async(req,res)=>{
     const comp = await Company.find();
     const ad = await Admin.findOne();
@@ -392,28 +392,28 @@ async(req,res)=>{
 })
 
 // Used For Fetching Data Of All Customers From Admin Page
-app.post('velvethomes/admin/allcustomers',
+app.post('/velvethomes/admin/allcustomers',
 async(req,res)=>{
     const cust = await Customer.find();
     return res.json({success: true,customers: cust})
 })
 
 // Used For Fetching All The Data Of All Companies On The Admin Dashboard 
-app.post('velvethomes/admin/allcompanies',
+app.post('/velvethomes/admin/allcompanies',
 async(req,res)=>{
     const comp = await Company.find();
     return res.json({success: true,company: comp});
 })
 
 // Used for Displaying All The Data Of Deliveries On The Admin 
-app.post('velvethomes/admin/deliveries',
+app.post('/velvethomes/admin/deliveries',
 async(req,res)=>{
     const del = await Bought.find().populate('product');
     return res.json({success: true,delivery: del})
 })
 
 // Used for adding a new discount code
-app.post('velvethomes/admin/discountcode', async(req,res)=>{
+app.post('/velvethomes/admin/discountcode', async(req,res)=>{
     if(req.body.code==="" || req.body.discountpercent<=2) return res.json({success: false, message: "Create a valid code"})
     const code = new DiscountCode();
     code.code = req.body.code
@@ -424,14 +424,14 @@ app.post('velvethomes/admin/discountcode', async(req,res)=>{
 })
 
 // Used for deleting a discount code
-app.post('velvethomes/admin/deletediscountcode',async(req,res)=>{
+app.post('/velvethomes/admin/deletediscountcode',async(req,res)=>{
     await DiscountCode.findOneAndDelete(req.body.id)
     const dc = await DiscountCode.find();
     return res.json({success: true,dc: dc});
 })
 
 // Used for marking the product to be delivered 
-app.post('velvethomes/admin/delivered',async(req,res)=>{
+app.post('/velvethomes/admin/delivered',async(req,res)=>{
     const b = await Bought.findOne({_id: req.body.id});
     b.status="Delivered"
     b.deliveryDate = new Date();
