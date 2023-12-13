@@ -9,7 +9,7 @@ export default function ShowProdCategory() {
   const [subCat,setSubCat] = useState([]);
   const fetchData = async function () {
     const response = await fetch(
-      "http://localhost:5000/velvethomes/customer/showallcat",
+      "https://ecommerce-8rsl.onrender.com/velvethomes/customer/showallcat",
       {
         method: "POST",
         headers: {

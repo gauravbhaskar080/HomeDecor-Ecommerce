@@ -97,7 +97,7 @@ export default function Company_Login() {
     const val = Object.values(isValidInput).every((value) => value === true);
     if (val) {
       const response = await fetch(
-        "http://localhost:5000/velvethomes/seller/login",
+        "https://ecommerce-8rsl.onrender.com/velvethomes/seller/login",
         {
           method: "POST",
           headers: {
@@ -168,7 +168,7 @@ export default function Company_Login() {
     if (val) {
       setSignupButton(false);
       const response = await fetch(
-        "http://localhost:5000/velvethomes/seller/createcomp",
+        "https://ecommerce-8rsl.onrender.com/velvethomes/seller/createcomp",
         {
           method: "POST",
           headers: {

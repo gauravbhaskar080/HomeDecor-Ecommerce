@@ -34,7 +34,7 @@ export default function AdminHomePage() {
     const handleSubmit = async(evt)=>{
         evt.preventDefault();
         const response = await fetch(
-            "http://localhost:5000/velvethomes/admin/discountcode",
+            "https://ecommerce-8rsl.onrender.com/velvethomes/admin/discountcode",
             {
                 method: "POST",
                 headers: {
@@ -63,7 +63,7 @@ export default function AdminHomePage() {
     const deleteCode = async(id)=>{
         alert(id)
         const response = await fetch(
-            "http://localhost:5000/velvethomes/admin/deletediscountcode",
+            "https://ecommerce-8rsl.onrender.com/velvethomes/admin/deletediscountcode",
             {
                 method: "POST",
                 headers: {
@@ -81,7 +81,7 @@ export default function AdminHomePage() {
     }
     const fetchData = async () => {
         const response = await fetch(
-            "http://localhost:5000/velvethomes/admin/home",
+            "https://ecommerce-8rsl.onrender.com/velvethomes/admin/home",
             {
                 method: "POST",
                 // headers: {

@@ -19,7 +19,7 @@ export default function ShowProdSubCat() {
 
   const fetchData = async function () {
     const response = await fetch(
-      "http://localhost:5000/velvethomes/customer/showallsubcat",
+      "https://ecommerce-8rsl.onrender.com/velvethomes/customer/showallsubcat",
       {
         method: "POST",
         headers: {

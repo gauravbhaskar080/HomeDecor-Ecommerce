@@ -19,7 +19,7 @@ export default function Cart() {
       setMessage("Please Enter Code To Be Applied")
     }else{
       const response = await fetch(
-        "http://localhost:5000/velvethomes/customer/validcode",
+        "https://ecommerce-8rsl.onrender.com/velvethomes/customer/validcode",
         {
           method: "POST",
           headers: {
@@ -45,7 +45,7 @@ export default function Cart() {
 
   const fetchData = async () => {
     const response = await fetch(
-      "http://localhost:5000/velvethomes/customer/cartdetails",
+      "https://ecommerce-8rsl.onrender.com/velvethomes/customer/cartdetails",
       {
         method: "POST",
         headers: {
@@ -93,7 +93,7 @@ export default function Cart() {
   }
   const removeFromCart = async(e)=>{
     const response = await fetch(
-      "http://localhost:5000/velvethomes/customer/deleteElementFromCart",
+      "https://ecommerce-8rsl.onrender.com/velvethomes/customer/deleteElementFromCart",
       {
         method: "POST",
         headers: {

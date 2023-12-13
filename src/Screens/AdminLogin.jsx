@@ -42,7 +42,7 @@ export default function AdminLogin() {
     );
     if(val){
       const response = await fetch(
-        "http://localhost:5000/velvethomes/admin/login",
+        "https://ecommerce-8rsl.onrender.com/velvethomes/admin/login",
         {
           method: "POST",
           headers: {
@@ -50,7 +50,7 @@ export default function AdminLogin() {
           },
           body: JSON.stringify({
             email: compStateLogin.username,
-            password: compStateLogin.password
+            password: compStateLogin.password,
           }),
         }
       );

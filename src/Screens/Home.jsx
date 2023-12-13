@@ -9,12 +9,12 @@ export default function Home() {
   const [showLoader,setShowLoader] = useState(true);
   const fetchData = async()=>{
     const response = await fetch(
-      "http://localhost:5000/velvethomes/customer/home",
+      "https://ecommerce-8rsl.onrender.com/velvethomes/customer/home",
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-        }
+        },
       }
     );
     const json = await response.json();

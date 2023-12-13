@@ -32,11 +32,10 @@ export default function AdminAllCompanies() {
 
     const fetchData = async () => {
         const response = await fetch(
-            "http://localhost:5000/velvethomes/admin/allcompanies",
-            {
-                method: "POST",
-
-            }
+          "https://ecommerce-8rsl.onrender.com/velvethomes/admin/allcompanies",
+          {
+            method: "POST",
+          }
         );
         const json = await response.json();
         if (json.success) {

@@ -63,26 +63,26 @@ export default function AddNewProduct() {
             s = "Artifacts"
         }
         const response = await fetch(
-            "http://localhost:5000/velvethomes/seller/addnewprod",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                title: formData.cnpTitle,
-                price: formData.cnpPrice,
-                quantity: formData.cnpQuantity,
-                description: formData.cnpDes,
-                companyusername: localStorage.getItem("userEmail"),
-                images: formData.cnpImages,
-                key_points: formData.cnpKeyPoints,
-                features_keys: newArrayKeys,
-                features_values: newArrayValues,
-                subcategory: s
-              }),
-            }
-          );
+          "https://ecommerce-8rsl.onrender.com/velvethomes/seller/addnewprod",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              title: formData.cnpTitle,
+              price: formData.cnpPrice,
+              quantity: formData.cnpQuantity,
+              description: formData.cnpDes,
+              companyusername: localStorage.getItem("userEmail"),
+              images: formData.cnpImages,
+              key_points: formData.cnpKeyPoints,
+              features_keys: newArrayKeys,
+              features_values: newArrayValues,
+              subcategory: s,
+            }),
+          }
+        );
           const json = await response.json();
           if (json.success) {
             const id = json._id;

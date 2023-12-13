@@ -25,7 +25,7 @@ export default function ShowProduct() {
 
   const addToCart = async function(){
     const response = await fetch(
-      "http://localhost:5000/velvethomes/customer/addtocart",
+      "https://ecommerce-8rsl.onrender.com/velvethomes/customer/addtocart",
       {
         method: "POST",
         headers: {
@@ -47,7 +47,7 @@ export default function ShowProduct() {
 
   const fetchData = async function () {
     const response = await fetch(
-      "http://localhost:5000/velvethomes/customer/productdetails",
+      "https://ecommerce-8rsl.onrender.com/velvethomes/customer/productdetails",
       {
         method: "POST",
         headers: {

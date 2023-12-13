@@ -18,7 +18,7 @@ export default function PinfoCustomer() {
 
   const fetchData = async () => {
     const response = await fetch(
-      "http://localhost:5000/velvethomes/customer/pinfo",
+      "https://ecommerce-8rsl.onrender.com/velvethomes/customer/pinfo",
       {
         method: "POST",
         headers: {

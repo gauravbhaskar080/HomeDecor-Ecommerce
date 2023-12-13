@@ -38,16 +38,16 @@ export default function AdminDeliveries() {
     const deliver = async (id) => {
         console.log(id)
         const response = await fetch(
-            "http://localhost:5000/velvethomes/admin/delivered",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify({
-                    id: id,
-                  })
-            }
+          "https://ecommerce-8rsl.onrender.com/velvethomes/admin/delivered",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              id: id,
+            }),
+          }
         );
         const json = await response.json();
         if (json.success) {
@@ -58,11 +58,10 @@ export default function AdminDeliveries() {
     const fetchData = async () => {
         setShowLoader(true);
         const response = await fetch(
-            "http://localhost:5000/velvethomes/admin/deliveries",
-            {
-                method: "POST",
-
-            }
+          "https://ecommerce-8rsl.onrender.com/velvethomes/admin/deliveries",
+          {
+            method: "POST",
+          }
         );
         const json = await response.json();
         if (json.success) {

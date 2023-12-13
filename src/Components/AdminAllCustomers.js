@@ -27,11 +27,10 @@ export default function AdminAllCustomers() {
 
     const fetchData = async () => {
         const response = await fetch(
-            "http://localhost:5000/velvethomes/admin/allcustomers",
-            {
-                method: "POST",
-
-            }
+          "https://ecommerce-8rsl.onrender.com/velvethomes/admin/allcustomers",
+          {
+            method: "POST",
+          }
         );
         const json = await response.json();
         if (json.success) {

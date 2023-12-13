@@ -28,14 +28,14 @@ export default function CompanyAllProducts() {
   };
   const fetchData = async () => {
     const response = await fetch(
-      "http://localhost:5000/velvethomes/selller/showallprods",
+      "https://ecommerce-8rsl.onrender.com/velvethomes/selller/showallprods",
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          email: localStorage.getItem("userEmail")
+          email: localStorage.getItem("userEmail"),
         }),
       }
     );
