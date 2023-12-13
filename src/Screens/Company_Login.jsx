@@ -66,7 +66,7 @@ export default function Company_Login() {
   // Css Properties Which differ the buttons In Order To Show Which Form is Selected Login or SignUp
   const selectedStyle = {
     height: "60px",
-    backgroundColor: "#ff7c54e2",
+    backgroundColor: "#5d5959",
     borderBottomLeftRadius: "0",
     borderBottomRightRadius: "0",
   };

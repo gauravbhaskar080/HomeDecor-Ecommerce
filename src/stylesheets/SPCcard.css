@@ -1,3 +1,4 @@
+
 .SPCcard1{
     width: 23%;
     margin-top: 20px;
@@ -35,7 +36,7 @@
     perspective: 230px;
   }
   .btn-12 span {
-    background: linear-gradient(0deg, #865439e3 0%, #c68c59e6 100%);
+    background: rgba(0, 0, 0, 0.726);
     display: block;
     position: absolute;
     width: 200px;

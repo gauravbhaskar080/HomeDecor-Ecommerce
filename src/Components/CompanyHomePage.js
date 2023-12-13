@@ -143,147 +143,209 @@ export default function CompanyHomePage() {
         fetchData();
     }, []);
     return (
-        <div className='CompanyHomePage'>
-            <div className="CompanyAdvertiseSeller" style={isScrolled ? { height: '95px' } : { height: '120px' }}>
-                <img src={logo} alt="" />
-                <div className="SelllerBrandName"><span>Velvet Home's Seller's Page</span></div>
-            </div>
-            <div className="CompanyHomeMainContent" onScroll={handleScroll} style={isScrolled ? { height: '621px' } : { height: '596px' }}>
-                <div className='TypingEffectCon'>
-                    <TypingEffect
-                        words={quotes}
-                        styles={{
-                            color: '#3F2305',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            width: '95%',
-                            height: '80px',
-                            fontSize: '30px',
-                            backgroundColor: '#F1C27B',
-                            border: '7px solid #3F2305',
-                            padding: '10px', borderRadius: '20px',
-                            margin: '5px'
-                        }} />
-                </div>
-                <div className="CompDetails">
-                    <div className="CHPcardCon">
-                        <div className="CHPImage">
-                            <img src="https://cdn-icons-png.flaticon.com/512/5309/5309779.png" className='CHPImgCon' alt="" />
-                        </div>
-                        <div className="CHPcard">
-                            <div className="CHPcardMain">
-                                <div className="CHPcardMainDiv">
-                                    <div className="CHPcardMainDivTitle">{comp.name}</div>
-                                </div>
-                                <div className="CHPcardMainDiv">
-                                    <div className="CHPcardMainDivHead">Email: </div>
-                                    <div className="CHPcardMainDivValue">{comp.username}</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="CHPcardCon">
-                        <div className="CHPImage">
-                            <img src="https://cdn-icons-png.flaticon.com/512/925/925014.png" className='CHPImgCon' alt="" />
-                        </div>
-                        <div className="CHPcard">
-                            <div className="CHPcardMain">
-                                <div className="CHPcardMainDiv">
-                                    <div className="CHPcardMainDivTitle">Total Turnover</div>
-                                </div>
-                                <div className="CHPcardMainDiv">
-                                    <div className="CHPcardMainDivHead">Business: </div>
-                                    <div className="CHPcardMainDivValue">Rs. {comp.totalbus}/-</div>
-                                </div>
-                                <div className="CHPcardMainDiv">
-                                    <div className="CHPcardMainDivHead">From: {comp.date}/{comp.month}/{comp.year}</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="CompTrackSalesHead" id='CompTrackSalesID'>Track Sales</div>
-                <div className="CompTrackSalesMain">
-                    <div className="CompTrackSalesDiv">
-                        <div className="CHPcardCon">
-                            <div className="CHPImage">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2311/2311838.png" className='CHPImgCon' alt="" />
-                            </div>
-                            <div className="CHPcard">
-                                <div className="CHPcardMain">
-                                    <div className="CHPcardMainDiv">
-                                        <div className="CHPcardMainDivTitle">Sales(this week)</div>
-                                    </div>
-                                    <div className="CHPcardMainDiv">
-                                        <div className="CHPcardMainDivTitle">Rs. {d.week}/-</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="CHPcardCon">
-                            <div className="CHPImage">
-                                <img src="https://cdn-icons-png.flaticon.com/128/3133/3133463.png" className='CHPImgCon' alt="" />
-                            </div>
-                            <div className="CHPcard">
-                                <div className="CHPcardMain">
-                                    <div className="CHPcardMainDiv">
-                                        <div className="CHPcardMainDivTitle">Sales(this month)</div>
-                                    </div>
-                                    <div className="CHPcardMainDiv">
-                                        <div className="CHPcardMainDivTitle">Rs. {d.month}/-</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="CHPcardCon">
-                            <div className="CHPImage">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2590/2590580.png" className='CHPImgCon' alt="" />
-                            </div>
-                            <div className="CHPcard">
-                                <div className="CHPcardMain">
-                                    <div className="CHPcardMainDiv">
-                                        <div className="CHPcardMainDivTitle">Sales(this year)</div>
-                                    </div>
-                                    <div className="CHPcardMainDiv">
-                                        <div className="CHPcardMainDivTitle">Rs. {d.year}/-</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="SalesChartCon">
-                        <SalesChart data={data} />
-                    </div>
-                </div>
-                <div className="CompTrackSalesHead">Recent Orders</div>
-                <div className="CompTrackSalesProdsCon">
-                    {recentlySold.map((s) => (
-                        <div className="CHPprodCard">
-                            <img src={s.product.images[0]} alt="" />
-                            <div className="CHPprodCardMain">
-                                <div className="CHPprodCardMainTitle">{s.product.title}</div>
-                                <div className="CHPprodCardMainTitle">
-                                    <div className="CHPprodCardMainTitleHead">Quantity Sold: </div>
-                                    <div className="CHPprodCardMainTitleVal">{s.quantity}</div>
-                                </div>
-                                <div className="CHPprodCardMainTitle">
-                                    <div className="CHPprodCardMainTitleHead">Order Date: </div>
-                                    <div className="CHPprodCardMainTitleVal">{extractDate(new Date(s.orderDate))}</div>
-                                </div>
-                                <div className="CHPprodCardMainTitle">
-                                    <div className="CHPprodCardMainTitleHead">Delivery Status: </div>
-                                    <div className="CHPprodCardMainTitleVal">{s.status}</div>
-                                </div>
-                                <div className="CHPprodCardMainTitle">
-                                    <div className="CHPprodCardMainTitleHead">Turn Over: </div>
-                                    <div className="CHPprodCardMainTitleVal">Rs. {Math.floor(s.quantity*s.product.price * (100 - s.product.margin) / 100)}/-</div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+      <div className="CompanyHomePage">
+        <div
+          className="CompanyAdvertiseSeller"
+          style={
+            isScrolled
+              ? { height: "95px", backgroundColor: "#333" }
+              : { height: "120px", backgroundColor: "#333" }
+          }
+        >
+          <img src={logo} alt="" />
+          <div className="SelllerBrandName">
+            <span>Velvet Home's Seller's Page</span>
+          </div>
         </div>
-    )
+        <div
+          className="CompanyHomeMainContent"
+          onScroll={handleScroll}
+          style={isScrolled ? { height: "621px" } : { height: "596px" }}
+        >
+          <div className="TypingEffectCon">
+            <TypingEffect
+              words={quotes}
+              styles={{
+                color: "#3F2305",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "95%",
+                height: "80px",
+                fontSize: "30px",
+                backgroundColor: "white",
+                border: "7px solid #3F2305",
+                padding: "10px",
+                borderRadius: "20px",
+                margin: "5px",
+              }}
+            />
+          </div>
+          <div className="CompDetails">
+            <div className="CHPcardCon">
+              <div className="CHPImage">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/5309/5309779.png"
+                  className="CHPImgCon"
+                  alt=""
+                />
+              </div>
+              <div className="CHPcard">
+                <div className="CHPcardMain">
+                  <div className="CHPcardMainDiv">
+                    <div className="CHPcardMainDivTitle">{comp.name}</div>
+                  </div>
+                  <div className="CHPcardMainDiv">
+                    <div className="CHPcardMainDivHead">Email: </div>
+                    <div className="CHPcardMainDivValue">{comp.username}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="CHPcardCon">
+              <div className="CHPImage">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/925/925014.png"
+                  className="CHPImgCon"
+                  alt=""
+                />
+              </div>
+              <div className="CHPcard">
+                <div className="CHPcardMain">
+                  <div className="CHPcardMainDiv">
+                    <div className="CHPcardMainDivTitle">Total Turnover</div>
+                  </div>
+                  <div className="CHPcardMainDiv">
+                    <div className="CHPcardMainDivHead">Business: </div>
+                    <div className="CHPcardMainDivValue">
+                      Rs. {comp.totalbus}/-
+                    </div>
+                  </div>
+                  <div className="CHPcardMainDiv">
+                    <div className="CHPcardMainDivHead">
+                      From: {comp.date}/{comp.month}/{comp.year}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="CompTrackSalesHead" id="CompTrackSalesID">
+            Track Sales
+          </div>
+          <div className="CompTrackSalesMain">
+            <div className="CompTrackSalesDiv">
+              <div className="CHPcardCon">
+                <div className="CHPImage">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/2311/2311838.png"
+                    className="CHPImgCon"
+                    alt=""
+                  />
+                </div>
+                <div className="CHPcard">
+                  <div className="CHPcardMain">
+                    <div className="CHPcardMainDiv">
+                      <div className="CHPcardMainDivTitle">
+                        Sales(this week)
+                      </div>
+                    </div>
+                    <div className="CHPcardMainDiv">
+                      <div className="CHPcardMainDivTitle">Rs. {d.week}/-</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="CHPcardCon">
+                <div className="CHPImage">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/3133/3133463.png"
+                    className="CHPImgCon"
+                    alt=""
+                  />
+                </div>
+                <div className="CHPcard">
+                  <div className="CHPcardMain">
+                    <div className="CHPcardMainDiv">
+                      <div className="CHPcardMainDivTitle">
+                        Sales(this month)
+                      </div>
+                    </div>
+                    <div className="CHPcardMainDiv">
+                      <div className="CHPcardMainDivTitle">Rs. {d.month}/-</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="CHPcardCon">
+                <div className="CHPImage">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/2590/2590580.png"
+                    className="CHPImgCon"
+                    alt=""
+                  />
+                </div>
+                <div className="CHPcard">
+                  <div className="CHPcardMain">
+                    <div className="CHPcardMainDiv">
+                      <div className="CHPcardMainDivTitle">
+                        Sales(this year)
+                      </div>
+                    </div>
+                    <div className="CHPcardMainDiv">
+                      <div className="CHPcardMainDivTitle">Rs. {d.year}/-</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="SalesChartCon">
+              <SalesChart data={data} />
+            </div>
+          </div>
+          <div className="CompTrackSalesHead">Recent Orders</div>
+          <div className="CompTrackSalesProdsCon">
+            {recentlySold.map((s) => (
+              <div className="CHPprodCard">
+                <img src={s.product.images[0]} alt="" />
+                <div className="CHPprodCardMain">
+                  <div className="CHPprodCardMainTitle">{s.product.title}</div>
+                  <div className="CHPprodCardMainTitle">
+                    <div className="CHPprodCardMainTitleHead">
+                      Quantity Sold:{" "}
+                    </div>
+                    <div className="CHPprodCardMainTitleVal">{s.quantity}</div>
+                  </div>
+                  <div className="CHPprodCardMainTitle">
+                    <div className="CHPprodCardMainTitleHead">Order Date: </div>
+                    <div className="CHPprodCardMainTitleVal">
+                      {extractDate(new Date(s.orderDate))}
+                    </div>
+                  </div>
+                  <div className="CHPprodCardMainTitle">
+                    <div className="CHPprodCardMainTitleHead">
+                      Delivery Status:{" "}
+                    </div>
+                    <div className="CHPprodCardMainTitleVal">{s.status}</div>
+                  </div>
+                  <div className="CHPprodCardMainTitle">
+                    <div className="CHPprodCardMainTitleHead">Turn Over: </div>
+                    <div className="CHPprodCardMainTitleVal">
+                      Rs.{" "}
+                      {Math.floor(
+                        (s.quantity *
+                          s.product.price *
+                          (100 - s.product.margin)) /
+                          100
+                      )}
+                      /-
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
 }

@@ -4,10 +4,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('https://images.unsplash.com/photo-1566908829550-e6551b00979b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
     background-repeat: no-repeat no-repeat;
     background-size: cover;
     background-position: center center;
+    font-family: "Arial"
 }
 .LoginFormAdmin{
     width: 60%;
@@ -15,6 +15,9 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    background-color: #b4aaaa;
+    border-radius: 15px;
+
 }
 .ImgBack{
     width: 40%;
@@ -29,6 +32,7 @@
     font-size: 50px;
     color: #fff;
     text-align: center;
+    font-size: 33px;
 }
 .LoginFormCon{
     width: 55%;
@@ -36,18 +40,27 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.FormAdminHead{
+    margin-left:26%;
 }
 .FormBtnHead{
+    margin-top: 10px;
     width: 180px;
     height: 60px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: x-large;
-    background-color: #FF7B54;
-    color: white;
+    background-color:black;
+    color: #fffaf0;
+    font-size: 20px;
 }
 .AdminLogin{
     margin-top: 15px;
@@ -57,7 +70,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 5px
+    border-radius: 5px;
+    background-color: #b4aaaa;
+
 }
 .input-company-wrapper{
     width: 90%;
@@ -68,7 +83,7 @@
     flex-direction: column;
 }
 .input-clf-label{
-    font-size: x-large;
+    font-size: 18px;
     font-weight: 700;
     margin-bottom: 2px;
     color: #553939;

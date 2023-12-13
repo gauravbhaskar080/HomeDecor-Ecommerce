@@ -10,9 +10,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #884A39;
+    background-color:black;
     height: 120px;
-    border-bottom: 3px solid gold;
+    border-bottom: 3px solid rgb(80, 67, 67);
     transition: height 0.5s;
 }
 .CompanyAdvertiseSeller img{

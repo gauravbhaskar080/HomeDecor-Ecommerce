@@ -14,8 +14,8 @@
   .top-title{
     font-size: 50px;
     padding: 10px 30px;
-    background-color: #FCDEC0;
-    border: 8px double #3F2305;
+    color : #f8f8f8;
+    font-family: 'Open Sans', sans-serif;
     border-radius: 15px;
   }
   .slide-image {

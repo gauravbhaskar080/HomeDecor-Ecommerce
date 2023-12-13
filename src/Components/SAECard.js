@@ -10,7 +10,7 @@ export default function SAECard({product}) {
     
     
   return (
-    <div className='SAECard'>
+    <div className='SAECard' style={{fontFamily : "Arial,sans-serif"}}>
       <img src={product.images[0]} className='SAEImage' alt="" />
       <div className="SAE-title">{t}{x<product.title.length && "..."}</div>
       <RatingProduct/>

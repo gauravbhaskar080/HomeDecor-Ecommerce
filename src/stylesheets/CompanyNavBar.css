@@ -1,7 +1,7 @@
 .cm-nav{
     width: 18%;
     height: 100%;
-    background-color: #562B08;
+    background-color:white;
     margin-top: 1%;
     border-radius: 5px;
     display: flex;
@@ -19,7 +19,7 @@
     border-radius: 8px;
     /* border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px; */
-    background-color: #3C2317;
+    background-color: black;
     /* flex-direction: column; */
 }
 .comp-nav-head img{
@@ -39,7 +39,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-    background-color: #784923;
+    background-color: gray;
     font-size: x-large;
     color: #fff;
     transition: background-color 0.5s,height 0.5s,width 0.5s;
@@ -48,16 +48,16 @@
     width: 96%;
     height: 56px;
     border-radius: 5px;
-    background-color: #936036;
+    background-color: rgb(50, 49, 49);
 }
 .comp-nav-item-selected{
     width: 98%;
     height: 60px;
     border-radius: 5px;
-    background-color: #885326;
+    background-color:gray;
 }
 .comp-nav-item-selected:hover{
-    background-color: #885326;
+    background-color: rgb(50, 49, 49);
     height: 60px;
     width: 98%;
 }

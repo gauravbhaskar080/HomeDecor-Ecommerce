@@ -55,61 +55,88 @@ export default function CompanyAllProducts() {
     return `${da<10 ? '0' : ''}${da}/${m<10?'0':''}${m}/${y}`;
   }
   return (
-    <div className='CompanyAllProducts'>
-      <div className="CompanyAdvertiseSeller" style={isScrolled ? { height: '95px' } : { height: '120px' }}>
+    <div className="CompanyAllProducts">
+      <div
+        className="CompanyAdvertiseSeller"
+        style={
+          isScrolled
+            ? { height: "95px", backgroundColor: "#333" }
+            : { height: "120px", backgroundColor: "#333" }
+        }
+      >
         <img src={logo} alt="" />
-        <div className="SelllerBrandName"><span>Velvet Home's Seller's Page</span></div>
+        <div className="SelllerBrandName">
+          <span>Velvet Home's Seller's Page</span>
+        </div>
       </div>
-      <div className="CompanyAllProductsMain" onScroll={handleScroll} style={isScrolled ? { height: '621px' } : { height: '596px' }}>
-        <div className='TypingEffectCon'>
+      <div
+        className="CompanyAllProductsMain"
+        onScroll={handleScroll}
+        style={isScrolled ? { height: "621px" } : { height: "596px" }}
+      >
+        <div className="TypingEffectCon">
           <TypingEffect
             words={quotes}
             styles={{
-              color: '#3F2305',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              width: '95%',
-              height: '80px',
-              fontSize: '30px',
-              backgroundColor: '#F1C27B',
-              border: '7px solid #3F2305',
-              padding: '10px', borderRadius: '20px',
-              margin: '5px'
-            }} />
+              color: "#3F2305",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "95%",
+              height: "80px",
+              fontSize: "30px",
+              backgroundColor: "white",
+              border: "7px solid #3F2305",
+              padding: "10px",
+              borderRadius: "20px",
+              margin: "5px",
+            }}
+          />
         </div>
-        <div className="CompTrackSalesHead" id='CompTrackSalesID'>All Products</div>
+        <div className="CompTrackSalesHead" id="CompTrackSalesID">
+          All Products
+        </div>
         <div className="CompTrackSalesProdsCon">
-          {objs.length===0 ? <div className='CAP-message'>0 Products Registered</div> : objs.map((o)=>(
-            <div className='CLPCard'>
-              <img src={o.images[0]} className='CLPCardImg' alt="" />
-              <div className="CLP-Main">
-                <div className="CLP-title" style={{justifyContent: 'center'}}>{o.title}</div>
-                <div className="CLP-title">
-                  <div className="CLP-title-head">Price: </div>
-                  <div className="CLP-title-val">Rs. {o.price}/-</div>
-                </div>
-                <div className="CLP-title">
-                  <div className="CLP-title-head">Quantity Left: </div>
-                  <div className="CLP-title-val">{o.quantity}</div>
-                </div>
-                <div className="CLP-title">
-                  <div className="CLP-title-head">Quantity Sold: </div>
-                  <div className="CLP-title-val">{o.quantitySold}</div>
-                </div>
-                <div className="CLP-title">
-                  <div className="CLP-title-head">Registered: </div>
-                  <div className="CLP-title-val">{getDateString(o.registered)}</div>
-                </div>
-                <div className="CLP-card-btn-con">
-                  <div className="CLP-card-btn">Edit</div>
+          {objs.length === 0 ? (
+            <div className="CAP-message">0 Products Registered</div>
+          ) : (
+            objs.map((o) => (
+              <div className="CLPCard">
+                <img src={o.images[0]} className="CLPCardImg" alt="" />
+                <div className="CLP-Main">
+                  <div
+                    className="CLP-title"
+                    style={{ justifyContent: "center" }}
+                  >
+                    {o.title}
+                  </div>
+                  <div className="CLP-title">
+                    <div className="CLP-title-head">Price: </div>
+                    <div className="CLP-title-val">Rs. {o.price}/-</div>
+                  </div>
+                  <div className="CLP-title">
+                    <div className="CLP-title-head">Quantity Left: </div>
+                    <div className="CLP-title-val">{o.quantity}</div>
+                  </div>
+                  <div className="CLP-title">
+                    <div className="CLP-title-head">Quantity Sold: </div>
+                    <div className="CLP-title-val">{o.quantitySold}</div>
+                  </div>
+                  <div className="CLP-title">
+                    <div className="CLP-title-head">Registered: </div>
+                    <div className="CLP-title-val">
+                      {getDateString(o.registered)}
+                    </div>
+                  </div>
+                  <div className="CLP-card-btn-con">
+                    <div className="CLP-card-btn">Edit</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-
+            ))
+          )}
         </div>
       </div>
     </div>
-  )
+  );
 }
