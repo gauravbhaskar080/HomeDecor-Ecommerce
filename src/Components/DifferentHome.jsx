@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./DifferentHome.css";
+import { Link } from "react-router-dom"; 
 import video from "./h2.mp4";
 import "../../src/stylesheets/home.css";
 import HomeNavbar from "./HomeNavbar";
@@ -9,7 +10,7 @@ const DifferentHome = () => {
   // const [showLoader, setShowLoader] = useState(true);
   // const fetchData = async () => {
   //   const response = await fetch(
-  //     "http://localhost:5000https://ecommerce-8rsl.onrender.com/velvethomes/customer/home",
+  //     "http://localhost:5000/velvethomes/customer/home",
   //     {
   //       method: "POST",
   //       headers: {
@@ -119,7 +120,7 @@ const DifferentHome = () => {
             borderRadius: "15px 15px 0 0",
           }}
         >
-          <a href="https://ecommerce-8rsl.onrender.com/velvethomes/showprodcat/64a5955d9b3dc77cbe74db29">
+          <Link to="/velvethomes/showprodcat/64a5955d9b3dc77cbe74db29">
             <img
               ref={(ref) => imagesRef.current.push(ref)}
               src="https://ii1.pepperfry.com/media/catalog/product/c/a/1100x1210/catherine-8-seater-dining-table-in-white-colour-by-durian-catherine-8-seater-dining-table-in-white-c-p2u9mw.jpg"
@@ -132,7 +133,7 @@ const DifferentHome = () => {
               }}
               className="lload img-fluid"
             />
-          </a>
+          </Link>
           <p>Furniture </p>
         </div>
         <div
@@ -142,7 +143,7 @@ const DifferentHome = () => {
             borderRadius: "15px 15px 0 0",
           }}
         >
-          <a href="https://ecommerce-8rsl.onrender.com/velvethomes/showprodcat/64a5960c7b9dea400786c055">
+          <Link href="/velvethomes/showprodcat/64a5960c7b9dea400786c055">
             <img
               ref={(ref) => imagesRef.current.push(ref)}
               src="https://cdn.pixelspray.io/v2/black-bread-289bfa/Zu3Ns5/wrkr/t.resize(h:450,w:500)/data/pottery-barn/23052022newimg/7910248_1.jpg"
@@ -155,7 +156,7 @@ const DifferentHome = () => {
                 boxShadow: "0px 8px 6px -4px rgba(0, 0, 0, 0.5)",
               }}
             />
-          </a>
+          </Link>
           <p>Bathroom </p>
         </div>
         <div
@@ -165,7 +166,7 @@ const DifferentHome = () => {
             borderRadius: "15px 15px 0 0",
           }}
         >
-          <a href="https://ecommerce-8rsl.onrender.com/velvethomes/showallprodsubcat/64aa7d3f3f89f953e9b1e8a8">
+          <Link href="/velvethomes/showallprodsubcat/64aa7d3f3f89f953e9b1e8a8">
             <img
               ref={(ref) => imagesRef.current.push(ref)}
               src="https://ii1.pepperfry.com/media/catalog/product/g/r/1100x1210/grey-marble-dust-shri-hanuman-sculpture-by-yellow-verandah-grey-marble-dust-shri-hanuman-sculpture-b-yxweg2.jpg"
@@ -178,7 +179,7 @@ const DifferentHome = () => {
                 boxShadow: "0px 8px 6px -4px rgba(0, 0, 0, 0.5)",
               }}
             />
-          </a>
+          </Link>
           <p>Artifacts</p>
         </div>
         <div
@@ -188,7 +189,7 @@ const DifferentHome = () => {
             borderRadius: "15px 15px 0 0",
           }}
         >
-          <a href="https://ecommerce-8rsl.onrender.com/velvethomes/showprodcat/64a594174f6b05e6fe5a5545">
+          <Link href="/velvethomes/showprodcat/64a594174f6b05e6fe5a5545">
             <img
               ref={(ref) => imagesRef.current.push(ref)}
               src="https://somany-uat.s3.amazonaws.com/static/uploads/Tiles-Somany/Product-Thumbnail/T60506284.jpg"
@@ -201,13 +202,13 @@ const DifferentHome = () => {
                 boxShadow: "0px 8px 6px -4px rgba(0, 0, 0, 0.5)",
               }}
             />
-          </a>
+          </Link>
           <p>Tile </p>
         </div>
       </div>
       <div className="family-room-image" style={{ margin: "3% 0 2% 0" }}>
-        <a
-          href="https://www.potterybarn.in/potterybarn-furniture/pottery-barn-living-room-furniture"
+        <Link
+          href="/pottery-barn-living-room-furniture"
           target="_self"
         >
           <img
@@ -219,7 +220,7 @@ const DifferentHome = () => {
             src="https://cdn.pixelspray.io/v2/black-bread-289bfa/Zu3Ns5/wrkr/original/potterybarn/banner/306_202310030553_PB_Reliance_F23_Diwali_HP_D_08.jpg?width=1750&amp;height=665&amp;mode=fill&amp;fill=solid&amp;fill-color=FFFFFF"
             className="img-fluid lazy"
           />
-        </a>
+        </Link>
       </div>
 
       <div
@@ -230,18 +231,18 @@ const DifferentHome = () => {
           fontWeight: "bold",
         }}
       >
-        <a
-          href="https://ecommerce-8rsl.onrender.com/velvethomes/showprodcat/64a5955d9b3dc77cbe74db29"
+        <Link
+          href="/velvethomes/showprodcat/64a5955d9b3dc77cbe74db29"
           style={{ color: "black" }}
         >
           FURNITURE
-        </a>
+        </Link>
       </div>
 
       <div style={{ display: "flex", margin: "1% 0% 3% 4%", columnGap: "1%" }}>
         <div className="image">
-          <a
-            href="https://ecommerce-8rsl.onrender.com/velvethomes/showallprodsubcat/64aa7d3d3f89f953e9b1e88a"
+          <Link
+            href="/velvethomes/showallprodsubcat/64aa7d3d3f89f953e9b1e88a"
             target="_self"
           >
             <img
@@ -257,12 +258,12 @@ const DifferentHome = () => {
                 boxShadow: "0px 8px 6px -4px rgba(0, 0, 0, 0.5)",
               }}
             />
-          </a>
+          </Link>
           <p>Table </p>
         </div>
         <div className="image">
-          <a
-            href="https://ecommerce-8rsl.onrender.com/velvethomes/showallprodsubcat/64aa7d3d3f89f953e9b1e88c"
+          <Link
+            href="/velvethomes/showallprodsubcat/64aa7d3d3f89f953e9b1e88c"
             target="_self"
           >
             <img
@@ -278,12 +279,12 @@ const DifferentHome = () => {
                 boxShadow: "0px 8px 6px -4px rgba(0, 0, 0, 0.5)",
               }}
             />
-          </a>
+          </Link>
           <p>Chair </p>
         </div>
         <div className="image">
-          <a
-            href="https://ecommerce-8rsl.onrender.com/velvethomes/showallprodsubcat/64aa7d3e3f89f953e9b1e894"
+          <Link
+            href="/velvethomes/showallprodsubcat/64aa7d3e3f89f953e9b1e894"
             target="_self"
           >
             <img
@@ -299,12 +300,12 @@ const DifferentHome = () => {
                 boxShadow: "0px 8px 6px -4px rgba(0, 0, 0, 0.5)",
               }}
             />
-          </a>
+          </Link>
           <p>Sofa </p>
         </div>
         <div className="image">
-          <a
-            href="https://ecommerce-8rsl.onrender.com/velvethomes/showallprodsubcat/64aa7d3d3f89f953e9b1e890"
+          <Link
+            href="/velvethomes/showallprodsubcat/64aa7d3d3f89f953e9b1e890"
             target="_self"
           >
             <img
@@ -320,12 +321,12 @@ const DifferentHome = () => {
                 boxShadow: "0px 8px 6px -4px rgba(0, 0, 0, 0.5)",
               }}
             />
-          </a>
+          </Link>
           <p>Dining Table </p>
         </div>
       </div>
       <div className="Artifacts-main-photo" style={{ margin: "3% 0" }}>
-        <a
+        <Link
           href="https://www.potterybarn.in/potterybarn-furniture/pottery-barn-outdoor-furniture"
           target="_self"
         >
@@ -338,7 +339,7 @@ const DifferentHome = () => {
             id="intersect_10"
             src="https://cdn.pixelspray.io/v2/black-bread-289bfa/Zu3Ns5/wrkr/original/potterybarn/banner/306_202310090655_PB_Reliance_Gifts_LP_D_01.jpg"
           />
-        </a>
+        </Link>
       </div>
       <div
         className="products"
@@ -348,12 +349,12 @@ const DifferentHome = () => {
           fontWeight: "bold",
         }}
       >
-        <a
-          href="https://ecommerce-8rsl.onrender.com/velvethomes/showallprodsubcat/64aa7d3f3f89f953e9b1e8a8"
+        <Link
+          href="/velvethomes/showallprodsubcat/64aa7d3f3f89f953e9b1e8a8"
           style={{ color: "black" }}
         >
           ARTIFACTS
-        </a>
+        </Link>
       </div>
       <div style={{ display: "flex", margin: "0 4%", columnGap: "0.5%" }}>
         <div style={{ display: "block", width: "20%" }}>
@@ -403,12 +404,12 @@ const DifferentHome = () => {
           fontWeight: "bold",
         }}
       >
-        <a
-          href="https://ecommerce-8rsl.onrender.com/velvethomes/showprodcat/64a594174f6b05e6fe5a5545"
+        <Link
+          href="/velvethomes/showprodcat/64a594174f6b05e6fe5a5545"
           style={{ color: "black" }}
         >
           TILE
-        </a>
+        </Link>
       </div>
       <div>
         <div style={{ display: "flex", columnGap: "10px", margin: " 0 4%" }}>
@@ -418,7 +419,7 @@ const DifferentHome = () => {
               borderRadius: "10px",
             }}
           >
-            <a href="#">
+            <Link href="#">
               <img
                 ref={(ref) => imagesRef.current.push(ref)}
                 width="100%"
@@ -431,10 +432,10 @@ const DifferentHome = () => {
                   boxShadow: "0px 8px 6px -4px rgba(0, 0, 0, 0.5)",
                 }}
               />
-            </a>
+            </Link>
           </div>
           <div className="item">
-            <a href="/pottery-barn-rugs-by-style">
+            <Link href="/pottery-barn-rugs-by-style">
               <img
                 ref={(ref) => imagesRef.current.push(ref)}
                 width="100%"
@@ -447,10 +448,10 @@ const DifferentHome = () => {
                   boxShadow: "0px 8px 6px -4px rgba(0, 0, 0, 0.5)",
                 }}
               />
-            </a>
+            </Link>
           </div>
           <div className="item">
-            <a href="/pottery-barn-table-lamps-66348">
+            <Link href="/pottery-barn-table-lamps-66348">
               <img
                 ref={(ref) => imagesRef.current.push(ref)}
                 width="100%"
@@ -463,7 +464,7 @@ const DifferentHome = () => {
                   boxShadow: "0px 8px 6px -4px rgba(0, 0, 0, 0.5)",
                 }}
               />
-            </a>
+            </Link>
           </div>
         </div>
         <div
@@ -474,12 +475,12 @@ const DifferentHome = () => {
             fontWeight: "bold",
           }}
         >
-          <a
-            href="https://ecommerce-8rsl.onrender.com/velvethomes/showprodcat/64a5960c7b9dea400786c055"
+          <Link
+            href="/velvethomes/showprodcat/64a5960c7b9dea400786c055"
             style={{ color: "black" }}
           >
             SANITORY
-          </a>
+          </Link>
         </div>
         <div
           style={{ display: "flex", margin: "0 4% 4% 4%", columnGap: "0.5%" }}
@@ -529,18 +530,18 @@ const DifferentHome = () => {
             fontWeight: "bold",
           }}
         >
-          <a
-            href="https://ecommerce-8rsl.onrender.com/velvethomes/showallprodsubcat/64aa7d3f3f89f953e9b1e8aa"
+          <Link
+            href="/velvethomes/showallprodsubcat/64aa7d3f3f89f953e9b1e8aa"
             style={{ color: "black" }}
           >
             PAINTS
-          </a>
+          </Link>
         </div>
         <div
           style={{ display: "flex", margin: "1% 4% 3% 4%", columnGap: "1%" }}
         >
           <div className="image">
-            <a
+            <Link
               href="https://www.potterybarn.in/potterybarn-kitchen-and-dining"
               target="_self"
             >
@@ -553,10 +554,10 @@ const DifferentHome = () => {
                 className="img-fluid lazy"
                 style={{ boxShadow: "0px 8px 6px -4px rgba(0, 0, 0, 0.5)" }}
               />
-            </a>
+            </Link>
           </div>
           <div className="image">
-            <a
+            <Link
               href="https://www.potterybarn.in/pottery-barn-drinkware-bar"
               target="_self"
             >
@@ -570,11 +571,11 @@ const DifferentHome = () => {
                 className="img-fluid lazy"
                 style={{ boxShadow: "0px 8px 6px -4px rgba(0, 0, 0, 0.5)" }}
               />
-            </a>
+            </Link>
           </div>
         </div>
         {/* <div>
-          <a
+          <Link
             href="https://my.matterport.com/show/?m=RjeBDTFbiQT&back=1"
             target="_blank"
           >
@@ -586,7 +587,7 @@ const DifferentHome = () => {
               id="loading-background"
               src="https://cdn-2.matterport.com/apifs/models/RjeBDTFbiQT/images/RBc6aLawxcp/02.06.2023_17.52.23.jpg?t=2-bff710ac65f656d4e6cb98826192c91865c23e87-1700387341-1&k=apifs%2Fmodels%2FRjeBDTFbiQT%2Fimages%2FRBc6aLawxcp%2F02.06.2023_17.52.23.jpg&width=1536&disable=upscale&dpr=1.25"
             />
-          </a>
+          </Link>
         </div> */}
       </div>
     </div>
