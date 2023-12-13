@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./DifferentHome.css";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import video from "./h2.mp4";
 import "../../src/stylesheets/home.css";
 import HomeNavbar from "./HomeNavbar";
@@ -123,28 +123,31 @@ const DifferentHome = () => {
           columnGap: "20px",
         }}
       >
-        <div
-          className="item"
-          style={{
-            borderRadius: "15px 15px 0 0",
-          }}
-        >
-          <Link to={`/velvethomes/showprodcat/${product.id}`}>
-            <img
-              ref={(ref) => imagesRef.current.push(ref)}
-              src={product.image}
-              width="335"
-              height="350"
-              alt={product.category}
-              style={{
-                borderRadius: "15px 15px 0 0",
-                boxShadow: "0px 8px 6px -4px rgba(0, 0, 0, 0.5)",
-              }}
-              className="lload img-fluid"
-            />
-          </Link>
-          <p>{product.category}</p>
-        </div>
+        {productsData.map((product) => (
+          <div
+            key={product.id}
+            className="item"
+            style={{
+              borderRadius: "15px 15px 0 0",
+            }}
+          >
+            <Link to={`/velvethomes/showprodcat/${product.id}`}>
+              <img
+                ref={(ref) => imagesRef.current.push(ref)}
+                src={product.image}
+                width="335"
+                height="350"
+                alt={product.category}
+                style={{
+                  borderRadius: "15px 15px 0 0",
+                  boxShadow: "0px 8px 6px -4px rgba(0, 0, 0, 0.5)",
+                }}
+                className="lload img-fluid"
+              />
+            </Link>
+            <p>{product.category}</p>
+          </div>
+        ))}
         <div
           className="item"
           style={{
